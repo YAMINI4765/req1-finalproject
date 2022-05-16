@@ -1,5 +1,5 @@
 resource "aws_instance" "example" {
-  ami           = var.AMIS[var.AWS_REGION]
+  ami           = var.AMIS[var.region]
   instance_type = "t2.micro"
 
   # the VPC subnet
@@ -9,6 +9,6 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = [aws_security_group.allow-ssh.id]
 
   # the public SSH key
-  key_name = "vinodhkey"
+  key_name = "mywin-yam1"
 }
 

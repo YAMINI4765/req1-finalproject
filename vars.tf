@@ -1,5 +1,5 @@
-variable "AWS_REGION" {
-  default = "ap-south-1"
+variable "region" {
+  default = "us-west-2"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
@@ -7,15 +7,22 @@ variable "PATH_TO_PRIVATE_KEY" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "vinodhkey.pem"
+  default = "mywin-yam1.pem"
 }
 
 variable "AMIS" {
   type = map(string)
   default = {
-    ap-south-1 = "ami-0756a1c858554433e"
-    us-west-2 = "ami-0756a1c858554433e"
-    eu-west-1 = "ami-0756a1c858554433e"
+    us-west-2 = "ami-074251216af698218"
+    us-west-2 = "ami-074251216af698218"
+    us-west-2 = "ami-074251216af698218"
   }
 }
 
+variable "bucket_name" {
+    default = "yamini65"
+}
+
+variable "acl_value" {
+    default = "private"
+}
